@@ -27,19 +27,30 @@ class GFG {
 
 class Solution {
 
-    // Note that the size of the array is n-1
     int missingNumber(int n, int arr[]) {
 
-        // Calculate the sum of the first n natural numbers
+       
         int totalSum = n * (n + 1) / 2;
         
-        // Calculate the sum of the elements in the array
+
         int arraySum = 0;
         for (int i = 0; i < arr.length; i++) {
             arraySum += arr[i];
         }
         
-        // The missing number is the difference between the total sum and the array sum
         return totalSum - arraySum;
     }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        int n1 = 5;
+        int[] arr1 = {1, 2, 3, 5};
+        System.out.println("Missing number: " + solution.missingNumber(n1, arr1)); // Output: 4
+
+        int n2 = 2;
+        int[] arr2 = {1};
+        System.out.println("Missing number: " + solution.missingNumber(n2, arr2)); // Output: 2
+    }
 }
+
