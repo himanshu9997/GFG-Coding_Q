@@ -90,14 +90,14 @@ class Solution {
         return -1;
     }
 
-    public static void main(String[] args) {
-        int[] arr1 = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
-        System.out.println(minJumps(arr1)); // Output: 3
+    // public static void main(String[] args) {
+    //     int[] arr1 = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
+    //     System.out.println(minJumps(arr1)); // Output: 3
 
-        int[] arr2 = {1, 4, 3, 2, 6, 7};
-        System.out.println(minJumps(arr2)); // Output: 2
+    //     int[] arr2 = {1, 4, 3, 2, 6, 7};
+    //     System.out.println(minJumps(arr2)); // Output: 2
 
-        int[] arr3 = {0, 10, 20};
-        System.out.println(minJumps(arr3)); // Output: -1
-    }
+    //     int[] arr3 = {0, 10, 20};
+    //     System.out.println(minJumps(arr3)); // Output: -1
+    // }
 }
