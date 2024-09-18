@@ -31,30 +31,25 @@ class Driverclass
 // } Driver Code Ends
 
 
+class Solution
+{
 
+    static boolean ispar(String x)
+    {
 
-
-class Solution {
-   
-    static boolean ispar(String x) {
-       
         Stack<Character> stack = new Stack<>();
         
-     
-        for (char ch : x.toCharArray()) {
-           
+        for (int i = 0; i < x.length(); i++) {
+            char ch = x.charAt(i);
+            
+        
             if (ch == '(' || ch == '{' || ch == '[') {
                 stack.push(ch);
             }
-            
+    
             else if (ch == ')' || ch == '}' || ch == ']') {
                 
-                if (stack.isEmpty()) {
-                    return false;
-                }
-               
-                char top = stack.pop();
-                if (!isMatchingPair(top, ch)) {
+                if (stack.isEmpty() || !isMatchingPair(stack.pop(), ch)) {
                     return false;
                 }
             }
@@ -63,12 +58,11 @@ class Solution {
         
         return stack.isEmpty();
     }
-
-   
-    private static boolean isMatchingPair(char open, char close) {
+     private static boolean isMatchingPair(char open, char close) {
         return (open == '(' && close == ')') ||
                (open == '{' && close == '}') ||
                (open == '[' && close == ']');
     }
+
 }
 
