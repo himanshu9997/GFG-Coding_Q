@@ -153,17 +153,6 @@ class Node {
     }
 }*/
 
-// class Node {
-//     int data;
-//     Node next, random;
-    
-//     Node(int data) {
-//         this.data = data;
-//         this.next = null;
-//         this.random = null;
-//     }
-// }
-
 class Solution {
     public Node copyList(Node head) {
         if (head == null) {
@@ -205,4 +194,3 @@ class Solution {
         return copyHead;
     }
 }
-
